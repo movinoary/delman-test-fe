@@ -48,7 +48,7 @@ export default function Home() {
 
   useEffect(() => {
     dataDispatch.getUsersData(usersData);
-  }, [usersData]);
+  }, [userProfile, usersData]);
 
   // Search Data
   const keys = ["email"];
@@ -161,6 +161,7 @@ export default function Home() {
 
   const handleCloseProfile = () => {
     onClose();
+    dataDispatch.setUserProfile({});
   };
 
   const deletePostMutation = useMutation({
@@ -172,6 +173,7 @@ export default function Home() {
 
   const handleDelete = (id) => {
     deletePostMutation.mutate(id);
+    1;
     onClose();
     toast({
       title: `success delete user in email : ${userProfile?.data?.["email"]}`,
@@ -193,7 +195,7 @@ export default function Home() {
     >
       <DrawerOverlay />
       <DrawerContent bgColor="gray.200">
-        <DrawerCloseButton />
+        <DrawerCloseButton onClick={handleCloseProfile} />
         <DrawerHeader>
           <Heading as="h1" size="lg" cursor="default">
             User Details
