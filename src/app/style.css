@@ -1,0 +1,23 @@
+.Grid {
+  border: 1px solid #00ff00;
+}
+
+.GridItemEven,
+.GridItemOdd {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.GridItemEven {
+  background-color: rgb(187, 187, 187);
+}
+
+.paragraph {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  padding: 0 10px;
+}

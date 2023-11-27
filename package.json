@@ -9,9 +9,20 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@chakra-ui/next-js": "^2.2.0",
+    "@chakra-ui/react": "^2.8.2",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@tanstack/react-query": "^5.8.4",
+    "@tanstack/react-query-devtools": "^5.8.4",
+    "axios": "^1.6.2",
+    "framer-motion": "^10.16.5",
+    "next": "14.0.3",
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.0.3"
+    "react-icons": "^4.12.0",
+    "react-query": "^3.39.3",
+    "react-window": "^1.8.9"
   },
   "devDependencies": {
     "eslint": "^8",
