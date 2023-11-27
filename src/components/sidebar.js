@@ -119,7 +119,7 @@ export default function Sidebar({ children }) {
 
   return (
     <Flex {...styles.body}>
-      <Heading {...styles.title}>DATA</Heading>
+      <Heading {...styles.title}>delman.io</Heading>
       <Flex {...styles.container}>
         <Flex {...styles.containerLeft}>
           <Menu
