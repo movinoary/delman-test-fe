@@ -48,7 +48,7 @@ export default function Home() {
 
   useEffect(() => {
     dataDispatch.getUsersData(usersData);
-  }, [userProfile, usersData]);
+  }, [usersData]);
 
   // Search Data
   const keys = ["email"];
@@ -173,7 +173,8 @@ export default function Home() {
 
   const handleDelete = (id) => {
     deletePostMutation.mutate(id);
-    1;
+    const updateUsers = usersData.filter((d) => d.id !== id);
+    console.log(updateUsers);
     onClose();
     toast({
       title: `success delete user in email : ${userProfile?.data?.["email"]}`,
@@ -181,6 +182,7 @@ export default function Home() {
       isClosable: true,
       position: "top",
     });
+    dataDispatch.getUsersData(updateUsers);
     dataDispatch.setUserProfile({});
   };
 
